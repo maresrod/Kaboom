@@ -13,7 +13,7 @@ public class EnemyMovement : MonoBehaviour {
      * Se llama antes de que se actualize el primer frame
      */
     void Start() {
-        Debug.Log("Screen width: " + Screen.width + "Screen height: " + Screen.height);
+        //Debug.Log("Screen width: " + Screen.width + "Screen height: " + Screen.height);
         enemyRenderer = GetComponent<Renderer>();
         enemyHalfWidth = enemyRenderer.bounds.center.magnitude;
     }
@@ -26,7 +26,6 @@ public class EnemyMovement : MonoBehaviour {
     }
 
     ///////////////////////////////////////////////////////// METHODS ////////////////////////////////////////////////////////////////////////
-
     /*
      * Movimiento horizontal del enemigo
      */
@@ -38,7 +37,7 @@ public class EnemyMovement : MonoBehaviour {
         } else if (IsReadyToChangeDirection()) {
             System.Random rand = new System.Random();
             int direction = rand.Next(0, 100); // Generamos un número random entre 0 y 2
-            Debug.Log("Result range--> " + direction);
+            //Debug.Log("Result range--> " + direction);
             if (direction == 99) {
                 speed = -speed; // Invertimos la dirección
                 stepsCount = 0; // Reiniciamos el contador de pasos
