@@ -22,8 +22,7 @@ public class EnemyBomb : MonoBehaviour
     {
     temp -= Time.deltaTime;
      if (temp <= 0f)
-     {
-         
+     {         
         dropBomb();
          temp = Timer;
      }
